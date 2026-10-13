@@ -1,0 +1,13 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.rise { animation: rise .8s ease-out both; }
+.float { animation: float 5s ease-in-out infinite; }
+.float-slow { animation: float 7s ease-in-out infinite; }
+/* Jaali (lattice) dots: an Indian architecture nod, pure CSS */
+.jaali { background-image: radial-gradient(circle at 10px 10px, rgba(255,255,255,.09) 1.5px, transparent 2px); background-size: 22px 22px; }
+details > summary { list-style: none; } details > summary::-webkit-details-marker { display: none; }
+details[open] .plus { transform: rotate(45deg); }
+@media (prefers-reduced-motion: reduce) { .rise,.float,.float-slow { animation: none; } html { scroll-behavior: auto; } }
+:focus-visible { outline: 3px solid #F59E0B; outline-offset: 2px; }
