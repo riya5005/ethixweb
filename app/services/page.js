@@ -6,7 +6,7 @@ export const metadata = { title: "Services | Ethixweb India" };
 export default function Services() {
   return (
     <>
-      <PageHead title="Our services" sub="Clear scope and clear ₹ pricing for every service." />
+      <PageHead title="Our services" sub="Everything you need, with a clear plan and a quote in ₹ before you commit." />
       <div className="mx-auto grid max-w-6xl gap-6 px-5 py-14 sm:grid-cols-2">
         {services.map((s) => (
           <div key={s.t} className="flex flex-col rounded-2xl border p-7 transition hover:border-brand hover:shadow-xl">
@@ -14,10 +14,9 @@ export default function Services() {
             <h2 className="mt-5 text-2xl font-semibold">{s.t}</h2>
             <p className="mt-2 text-gray-600">{s.d}</p>
             <ul className="mt-4 space-y-2 text-sm">{s.pts.map((p) => <li key={p} className="flex items-center gap-2"><Icon name="check" className="h-4 w-4 text-brand" />{p}</li>)}</ul>
-            <p className="mt-6 border-t pt-4 text-sm text-gray-500">Typical starting price <span className="text-lg font-bold text-ink">{s.from}</span></p>
+            <Link href="/contact" className="mt-6 border-t pt-4 text-sm font-semibold text-brand hover:underline">Ask for a quote →</Link>
           </div>
         ))}
-        <p className="text-xs text-gray-400 sm:col-span-2">Sample prices. Update to match Ethixweb's real pricing.</p>
       </div>
       <div className="text-center"><Link href="/contact" className="inline-block rounded-full bg-brand px-8 py-3.5 font-semibold text-white transition hover:bg-deep">Get a free quote</Link></div>
     </>
