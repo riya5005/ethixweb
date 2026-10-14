@@ -6,7 +6,7 @@ A redesign of ethixweb.com for Indian businesses: a fast public website, an enqu
 
 - **Live site:** https://ethixweb-beta.vercel.app
 - **Admin:** https://ethixweb-beta.vercel.app/admin
-- **Demo admin password:** ADD_DEMO_PASSWORD
+- **Demo admin password:** Ethix2026
 - **PageSpeed screenshots:** `/screenshots` (mobile and desktop)
 
 ## Features
