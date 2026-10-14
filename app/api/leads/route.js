@@ -17,7 +17,7 @@ export async function POST(req) {
 
     // 2. Spam traps: honeypot filled, or form submitted in under 3 seconds
     if (b.website) return NextResponse.json({ ok: true }); // pretend success so bots don't adapt
-    if (now - Number(b.t) < 3000) return fail("Please take a moment and try again.");
+    if (!(now - Number(b.t) >= 3000)) return fail("Please take a moment and try again.");
 
     // 3. Validation (never trust the browser)
     const name = String(b.name || "").trim();
