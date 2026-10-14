@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import { services, process, work, stats, why, testimonials, faqs } from "@/lib/content";
+import { services, process, work, stats, why, review, faqs, TRUSTPILOT } from "@/lib/content";
 
 export default function Home() {
   return (
