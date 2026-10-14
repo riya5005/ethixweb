@@ -10,7 +10,7 @@ export default function Home() {
         <div className="absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full bg-brand/40 blur-3xl" />
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 lg:grid-cols-2 lg:py-24">
           <div className="rise">
-            <p className="inline-block rounded-full border border-white/20 px-4 py-1.5 text-sm text-white/80">Trusted by growing businesses across India</p>
+            <p className="inline-block rounded-full border border-white/20 px-4 py-1.5 text-sm text-white/80">Websites and ads for Indian businesses</p>
             <h1 className="mt-6 text-4xl font-bold leading-[1.1] sm:text-6xl">Websites and ads that bring customers to your door.</h1>
             <p className="mt-5 max-w-lg text-lg text-white/75">We build fast websites and run Google Ads for Indian businesses. UPI, WhatsApp and local SEO come built in, and every price is in ₹.</p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -18,7 +18,7 @@ export default function Home() {
               <Link href="/services" className="rounded-full border border-white/30 px-7 py-3.5 font-semibold transition hover:bg-white/10">See our services</Link>
             </div>
             <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/70">
-              {["No hidden charges", "GST-ready invoices", "Support in IST"].map((t) => <li key={t} className="flex items-center gap-2"><Icon name="check" className="h-4 w-4 text-saffron" />{t}</li>)}
+              {["No hidden charges", "GST-ready invoices", "Reply in under an hour"].map((t) => <li key={t} className="flex items-center gap-2"><Icon name="check" className="h-4 w-4 text-saffron" />{t}</li>)}
             </ul>
           </div>
 
@@ -79,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* WORK */}
-      <Section title="Featured work" sub="A few of the businesses we have helped grow.">
+      <Section title="Featured work" sub="Concept builds that show how we would approach common Indian business types.">
         <div className="grid gap-6 sm:grid-cols-3">
           {work.map((w) => (
             <div key={w.n} className="group overflow-hidden rounded-2xl border bg-white transition hover:shadow-xl">
@@ -93,7 +93,6 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <p className="mt-3 text-xs text-gray-400">Sample case studies. Replace with real client results.</p>
       </Section>
 
       {/* WHY */}
@@ -107,14 +106,17 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <Section title="What clients say">
+      <Section title="Trusted by clients">
         <div className="grid gap-6 sm:grid-cols-3">
-          {testimonials.map((t) => (
-            <figure key={t.n} className="rounded-2xl bg-soft p-6">
-              <blockquote className="text-gray-700">“{t.q}”</blockquote>
-              <figcaption className="mt-4 text-sm"><span className="font-semibold">{t.n}</span><br /><span className="text-gray-500">{t.r}</span></figcaption>
-            </figure>
-          ))}
+          <div className="flex flex-col justify-center rounded-2xl bg-soft p-7 text-center">
+            <p className="text-5xl font-bold text-brand">4.0<span className="text-2xl text-gray-400">/5</span></p>
+            <p className="mt-1 text-sm text-gray-600">Rated on Trustpilot</p>
+          </div>
+          <figure className="rounded-2xl bg-soft p-7 sm:col-span-2">
+            <blockquote className="text-lg text-gray-700">“{review.q}”</blockquote>
+            <figcaption className="mt-4 text-sm"><span className="font-semibold">{review.n}</span> <span className="text-gray-500">· {review.r}</span></figcaption>
+            <a href={TRUSTPILOT} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-sm font-semibold text-brand hover:underline">Read more reviews on Trustpilot →</a>
+          </figure>
         </div>
       </Section>
 
@@ -134,7 +136,7 @@ export default function Home() {
       <section className="mx-auto mt-24 max-w-6xl px-5">
         <div className="jaali rounded-3xl bg-gradient-to-br from-brand to-deep p-10 text-center text-white sm:p-16">
           <h2 className="text-3xl font-bold sm:text-4xl">Ready to get more customers?</h2>
-          <p className="mx-auto mt-3 max-w-md text-white/85">Tell us about your business. We will reply within one working day with a clear plan and price in ₹.</p>
+          <p className="mx-auto mt-3 max-w-md text-white/85">Tell us about your business. We reply in under an hour with a clear plan and price in ₹.</p>
           <Link href="/contact" className="mt-8 inline-block rounded-full bg-white px-8 py-3.5 font-semibold text-brand transition hover:scale-105">Get a free quote</Link>
         </div>
       </section>
