@@ -17,7 +17,7 @@ export default function ContactForm() {
       const data = await res.json();
       if (!res.ok) return setState({ status: "error", msg: data.error || "Something went wrong." });
       e.target.reset();
-      setState({ status: "ok", msg: "Thank you! We will contact you within one working day." });
+      setState({ status: "ok", msg: "Thank you! We will reply in under an hour." });
     } catch {
       setState({ status: "error", msg: "Network error. Please check your connection and try again." });
     }
